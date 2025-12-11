@@ -6,168 +6,251 @@
 <title>Tameka Williams | Cloud & DevSecOps Engineer</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+/* Global styles */
 body {
-font-family: 'Inter', sans-serif;
-background-color: #0d1117;
-color: #e6edf3;
-margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #1c1f24;
+  color: #e6edf3;
+  margin: 0;
+  line-height: 1.6;
 }
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  color: #0a84ff;
+}
+a {
+  transition: color 0.3s ease;
+}
+
+/* Navigation */
 nav {
-display: flex;
-justify-content: center;
-background: #161b22;
-padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background: #161b22;
+  padding: 1rem;
 }
 nav a {
-color: #e6edf3;
-text-decoration: none;
-margin: 0 1rem;
-font-weight: bold;
+  color: #e6edf3;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
 }
 nav a:hover {
-color: #0a84ff;
+  color: #00c2ff;
 }
+
+/* Hero banner */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #161b22, #1c1f24);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #8b949e;
+}
+.hero .cta {
+  margin-top: 1.5rem;
+}
+.hero .cta a {
+  background: #0a84ff;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.hero .cta a:hover {
+  background: #00c2ff;
+}
+
+/* Sections */
 section {
-display: none;
-max-width: 900px;
-margin: auto;
-padding: 2rem;
+  display: none;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
 }
 section.active {
-display: block;
+  display: block;
 }
-h1 {
-font-size: 2rem;
-margin-bottom: 1rem;
+
+/* Resume styling */
+.resume-section h2 {
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
 }
-.links a {
-display: inline-block;
-margin-right: 1rem;
-font-size: 1.2rem;
-color: #0a84ff;
+.resume-section ul {
+  list-style: none;
+  padding: 0;
 }
-.links a:hover {
-color: #00c2ff;
+.resume-section li::before {
+  content: "• ";
+  color: #0a84ff;
+  font-weight: bold;
 }
+
+/* Project cards */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: #161b22;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.02);
+}
+.project-card h3 {
+  margin-top: 0;
+}
+.project-card a {
+  color: #00c2ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Document gallery */
 .doc-gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 .doc-gallery img {
-width: 100%;
-border: 2px solid #30363d;
-border-radius: 8px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  width: 100%;
+  border: 2px solid #30363d;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
 }
+.doc-gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* Footer */
 footer {
-text-align: center;
-padding: 1rem;
-background: #161b22;
-font-size: 0.9rem;
-color: #8b949e;
+  text-align: center;
+  padding: 1rem;
+  background: #161b22;
+  font-size: 0.9rem;
+  color: #8b949e;
 }
 </style>
 </head>
 <body>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Tameka Williams</h1>
+  <p>Cloud & DevSecOps Engineer | Securing mission-critical systems with precision</p>
+  <div class="cta">
+    <a href="resume.pdf" download>Download PDF Resume</a>
+  </div>
+</div>
+
+<!-- Navigation -->
 <nav>
-<a href="#" onclick="showTab('home')">Home</a>
-<a href="#" onclick="showTab('resume')">Resume</a>
-<a href="#" onclick="showTab('docs')">Supporting Documentation</a>
+  <a href="#" onclick="showTab('home')">Home</a>
+  <a href="#" onclick="showTab('resume')">Resume</a>
+  <a href="#" onclick="showTab('projects')">Projects</a>
+  <a href="#" onclick="showTab('docs')">Supporting Documentation</a>
 </nav>
 
 <!-- Home -->
 <section id="home" class="active">
-<h1>WHO AM I? </h1>
-<p>
-I am Tameka Williams, a cloud-focused IT professional with over a decade of experience supporting military, government, and enterprise environments. Currently serving as a Cloud Computing Engineer for the U.S. Air Force, I specialize in architecting and securing AWS and Azure IL6 environments for mission-critical operations.
-
-My career has been built on a foundation of cybersecurity, DevOps automation, and systems administration, with proven success in deploying Kubernetes clusters, implementing hardened security controls, and leading containerized solutions in air-gapped systems. I hold an active Secret Clearance and a CompTIA Security+ certification, ensuring I can deliver secure, compliant solutions in highly regulated environments.
-
-Beyond the technical side, I’m a trusted leader who has managed $100K+ IT inventories, coordinated cross-department collaboration, and guided teams to strengthen system performance and security posture. Whether it’s building resilient cloud infrastructure, conducting vulnerability assessments, or aligning deployments with DoD and FedRAMP standards, I thrive on solving complex challenges that keep organizations secure and mission-ready.
-
-When I’m not engineering secure cloud solutions, I’m advancing my studies in Computer Science at Auburn University at Montgomery, continuing to expand my expertise in emerging technologies.</p>
-<div class="links">
-<a href="http://linkedin.com/in/tameka-williams-9b66a7b6" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
-</a>
-<a href="https://tawilliams27.GitHub.io/Tameka-C-Williams-resume/" target="_blank">
-<i class="fab fa-github"></i> GitHub
-</a>
-</div>
+  <h1>About Me</h1>
+  <p>
+    I am Tameka Williams, a cloud-focused IT professional with over a decade of experience supporting military, government, and enterprise environments. Currently serving as a Cloud Computing Engineer for the U.S. Air Force, I specialize in architecting and securing AWS and Azure IL6 environments for mission-critical operations.
+  </p>
+  <div class="links">
+    <a href="http://linkedin.com/in/tameka-williams-9b66a7b6" target="_blank">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://tawilliams27.GitHub.io/Tameka-C-Williams-resume/" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
 </section>
 
 <!-- Resume -->
 <section id="resume">
-<h1>Resume</h1>
-<p>Highlights of professional experience, cloud engineering, DevOps, and cybersecurity projects.</p>
-CORE SKILLS
-•	Cloud Platforms: AWS, Azure (IL2–IL6 environments)
-•	DevOps & Automation: Kubernetes (AKS/EKS), Terraform, GitLab CI/CD, Zarf deployments
-•	Cybersecurity: CompTIA Security+, RMF, NIST, FedRAMP, ACAS/Nessus vulnerability scanning
-•	Systems Administration: Windows OS, Active Directory, Linux, SharePoint, Remedy Ticketing
-•	Leadership: IT Operations Management, Inventory Control, Cybersecurity Liaison, End-User Support
-PROFESSIONAL EXPERIENCE
-SAIC / U.S. Air Force — Cloud Computing Engineer | 2024–Present
-•	Architect and secure IL6-classified AWS and Azure environments for DoD cyber operations.
-•	Deploy and manage Kubernetes clusters (AKS/EKS) across IL2–IL6 environments using Terraform and GitLab CI/CD.
-•	Lead containerized solution deployments in air-gapped systems with Zarf, ensuring compliance with DoD protocols.
-•	Conducted ACAS vulnerability assessments and STIG evaluations across IL2–IL6 environments, developing and implementing hardened remediation scripts to ensure compliance and strengthen security posture.
-•	Collaborate with cybersecurity and Descopes teams to align deployments with DoD, and FedRAMP standards.
-•	Investigate and document cloud security incidents, strengthening audit readiness and security posture.
+  <h1>Resume</h1>
+  <div class="resume-section">
+    <h2>Core Skills</h2>
+    <ul>
+      <li>Cloud Platforms: AWS, Azure (IL2–IL6 environments)</li>
+      <li>DevOps & Automation: Kubernetes, Terraform, GitLab CI/CD, Zarf deployments</li>
+      <li>Cybersecurity: CompTIA Security+, RMF, NIST, FedRAMP, ACAS/Nessus</li>
+      <li>Systems Administration: Windows OS, Active Directory, Linux, SharePoint</li>
+      <li>Leadership: IT Operations Management, Inventory Control, End-User Support</li>
+    </ul>
+  </div>
+  <div class="resume-section">
+    <h2>Professional Experience</h2>
+    <p><strong>SAIC / U.S. Air Force — Cloud Computing Engineer | 2024–Present</strong></p>
+    <ul>
+      <li>Architect and secure IL6-classified AWS and Azure environments for DoD cyber operations.</li>
+      <li>Deploy and manage Kubernetes clusters (AKS/EKS) using Terraform and GitLab CI/CD.</li>
+      <li>Lead containerized solution deployments in air-gapped systems with Zarf.</li>
+    </ul>
+    <!-- Add other roles similarly -->
+  </div>
+  <div class="resume-section">
+    <h2>Education & Certifications</h2>
+    <ul>
+      <li>B.S., Computer Science (In Progress) — Auburn University at Montgomery</li>
+      <li>A.S., Computer Information Systems — Trenholm State Community College</li>
+      <li>CompTIA Security+ — Certified</li>
+      <li>Active Secret Clearance</li>
+    </ul>
+  </div>
+</section>
 
-Vectrus — Computer Operations Manager / Logistics Readiness | 2019–2024
-•	Directed IT initiatives for U.S. Air Force operations, managing hardware/software deployments and compliance tasks.
-•	Served as Cybersecurity Liaison, implementing DoD-aligned security controls and RMF activities for system ATO.
-•	Administered SharePoint, Remedy ticketing, and $100K+ IT inventory, improving asset utilization and readiness.
-•	Conducted vulnerability scans (ACAS/Nessus) and delivered security awareness training to personnel.
-U.S. Air Force — Systems Administrator (Tier 2) | 2012–2016
-•	Provided Tier 2 support for 1,000+ end users, resolving escalated hardware/software/network issues with 95% SLA compliance.
-•	Managed Active Directory operations, VoIP installations, and enterprise workstation imaging.
-•	Troubleshot and maintained network infrastructure, ensuring optimal system availability.
-U.S. Army — Hardware Support Technician | 2009–2011
-•	Installed and maintained structured cabling, desktop systems, and hardware racks for mission-critical environments.
-•	Coordinated IT hardware/software procurement and managed asset inventory for training centers.
-EDUCATION & CERTIFICATIONS
-•	B.S., Computer Science (In Progress) — Auburn University at Montgomery
-•	A.S., Computer Information Systems — Trenholm State Community College
-•	CompTIA Security+ — Certified
-•	Active Secret Clearance
-  
-<!-- Paste your resume content here -->
+<!-- Projects -->
+<section id="projects">
+  <h1>Featured Projects</h1>
+  <div class="project-gallery">
+    <div class="project-card">
+      <h3>Secure Kubernetes Deployment</h3>
+      <p>Automated AKS/EKS cluster provisioning with Terraform and GitLab CI/CD.</p>
+      <a href="https://github.com/tawilliams27/k8s-secure" target="_blank">View Project</a>
+    </div>
+    <div class="project-card">
+      <h3>Air-Gapped Container Solutions</h3>
+      <p>Deployed Zarf-based containerized apps in IL6 environments.</p>
+      <a href="https://github.com/tawilliams27/zarf-deployment" target="_blank">View Project</a>
+    </div>
+  </div>
 </section>
 
 <!-- Supporting Documentation -->
 <section id="docs">
-<h1>Supporting Documentation</h1>
-<div class="doc-gallery">
-<!-- Replace src with actual image paths once uploaded to repo -->
-<div>
-<img src="IMG_1553.jpeg" alt="CompTIA Security+ Certificate">
-</div>
-<div>
-<img src="IMG_1554.jpeg" alt="Microsoft Azure Administrator Certificate">
-</div>
-<div>
-<img src="IMG_1558.jpeg" alt="Associate in Applied Science Certificate">
-</div>
-</div>
+  <h1>Supporting Documentation</h1>
+  <div class="doc-gallery">
+    <div><img src="IMG_1553.jpeg" alt="CompTIA Security+ Certificate"></div>
+    <div><img src="IMG_1554.jpeg" alt="Microsoft Azure Administrator Certificate"></div>
+    <div><img src="IMG_1558.jpeg" alt="Associate in Applied Science Certificate"></div>
+  </div>
 </section>
 
 <footer>
-© 2025 Tameka Williams | Cloud & DevSecOps Engineer
+  © 2025 Tameka Williams | Cloud & DevSecOps Engineer
 </footer>
 
 <script>
 function showTab(tabId) {
-document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-document.getElementById(tabId).classList.add('active');
-}
-</script>
-</body>
-</html>
-
-
-
-
+  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+  document.getElementById(tab
 
