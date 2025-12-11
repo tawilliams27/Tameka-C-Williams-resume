@@ -6,7 +6,6 @@
 <title>Tameka Williams | Cloud & DevSecOps Engineer</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* Global styles */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #1c1f24;
@@ -18,11 +17,6 @@ h1, h2, h3 {
   font-family: 'Merriweather', serif;
   color: #0a84ff;
 }
-a {
-  transition: color 0.3s ease;
-}
-
-/* Navigation */
 nav {
   display: flex;
   justify-content: center;
@@ -38,8 +32,6 @@ nav a {
 nav a:hover {
   color: #00c2ff;
 }
-
-/* Hero banner */
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -66,8 +58,6 @@ nav a:hover {
 .hero .cta a:hover {
   background: #00c2ff;
 }
-
-/* Sections */
 section {
   display: none;
   max-width: 900px;
@@ -77,68 +67,60 @@ section {
 section.active {
   display: block;
 }
-
-/* Resume styling */
-.resume-section h2 {
-  border-bottom: 1px solid #30363d;
-  padding-bottom: 0.5rem;
-  margin-top: 2rem;
+/* Skills */
+.skills {
+  margin: 2rem 0;
 }
-.resume-section ul {
+.skill {
+  margin-bottom: 1rem;
+}
+.skill span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+.skill-bar {
+  background: #30363d;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 12px;
+}
+.skill-bar .fill {
+  background: #0a84ff;
+  height: 100%;
+  transition: width 1s ease;
+}
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid #0a84ff;
+}
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.timeline-date {
+  position: absolute;
+  left: -6rem;
+  top: 0;
+  font-weight: bold;
+  color: #8b949e;
+}
+.timeline-content h3 {
+  margin-top: 0;
+  color: #e6edf3;
+}
+.timeline-content ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
 }
-.resume-section li::before {
+.timeline-content li::before {
   content: "• ";
   color: #0a84ff;
   font-weight: bold;
 }
-
-/* Project cards */
-.project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.project-card {
-  background: #161b22;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
-}
-.project-card:hover {
-  transform: scale(1.02);
-}
-.project-card h3 {
-  margin-top: 0;
-}
-.project-card a {
-  color: #00c2ff;
-  text-decoration: none;
-  font-weight: bold;
-}
-.project-card a:hover {
-  text-decoration: underline;
-}
-
-/* Document gallery */
-.doc-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-.doc-gallery img {
-  width: 100%;
-  border: 2px solid #30363d;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
-}
-.doc-gallery img:hover {
-  transform: scale(1.03);
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -187,70 +169,89 @@ footer {
 <!-- Resume -->
 <section id="resume">
   <h1>Resume</h1>
-  <div class="resume-section">
+
+  <!-- Skills -->
+  <div class="skills">
     <h2>Core Skills</h2>
-    <ul>
-      <li>Cloud Platforms: AWS, Azure (IL2–IL6 environments)</li>
-      <li>DevOps & Automation: Kubernetes, Terraform, GitLab CI/CD, Zarf deployments</li>
-      <li>Cybersecurity: CompTIA Security+, RMF, NIST, FedRAMP, ACAS/Nessus</li>
-      <li>Systems Administration: Windows OS, Active Directory, Linux, SharePoint</li>
-      <li>Leadership: IT Operations Management, Inventory Control, End-User Support</li>
-    </ul>
-  </div>
-  <div class="resume-section">
-    <h2>Professional Experience</h2>
-    <p><strong>SAIC / U.S. Air Force — Cloud Computing Engineer | 2024–Present</strong></p>
-    <ul>
-      <li>Architect and secure IL6-classified AWS and Azure environments for DoD cyber operations.</li>
-      <li>Deploy and manage Kubernetes clusters (AKS/EKS) using Terraform and GitLab CI/CD.</li>
-      <li>Lead containerized solution deployments in air-gapped systems with Zarf.</li>
-    </ul>
-    <!-- Add other roles similarly -->
-  </div>
-  <div class="resume-section">
-    <h2>Education & Certifications</h2>
-    <ul>
-      <li>B.S., Computer Science (In Progress) — Auburn University at Montgomery</li>
-      <li>A.S., Computer Information Systems — Trenholm State Community College</li>
-      <li>CompTIA Security+ — Certified</li>
-      <li>Active Secret Clearance</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-  <h1>Featured Projects</h1>
-  <div class="project-gallery">
-    <div class="project-card">
-      <h3>Secure Kubernetes Deployment</h3>
-      <p>Automated AKS/EKS cluster provisioning with Terraform and GitLab CI/CD.</p>
-      <a href="https://github.com/tawilliams27/k8s-secure" target="_blank">View Project</a>
+    <div class="skill">
+      <span>AWS & Azure</span>
+      <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
     </div>
-    <div class="project-card">
-      <h3>Air-Gapped Container Solutions</h3>
-      <p>Deployed Zarf-based containerized apps in IL6 environments.</p>
-      <a href="https://github.com/tawilliams27/zarf-deployment" target="_blank">View Project</a>
+    <div class="skill">
+      <span>Kubernetes & Terraform</span>
+      <div class="skill-bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <span>Cybersecurity & Compliance</span>
+      <div class="skill-bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+    <div class="skill">
+      <span>Systems Administration</span>
+      <div class="skill-bar"><div class="fill" style="width:75%"></div></div>
+    </div>
+    <div class="skill">
+      <span>Leadership</span>
+      <div class="skill-bar"><div class="fill" style="width:70%"></div></div>
     </div>
   </div>
-</section>
 
-<!-- Supporting Documentation -->
-<section id="docs">
-  <h1>Supporting Documentation</h1>
-  <div class="doc-gallery">
-    <div><img src="IMG_1553.jpeg" alt="CompTIA Security+ Certificate"></div>
-    <div><img src="IMG_1554.jpeg" alt="Microsoft Azure Administrator Certificate"></div>
-    <div><img src="IMG_1558.jpeg" alt="Associate in Applied Science Certificate"></div>
+  <!-- Timeline -->
+  <h2>Professional Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">2024–Present</div>
+      <div class="timeline-content">
+        <h3>SAIC / U.S. Air Force — Cloud Computing Engineer</h3>
+        <ul>
+          <li>Architect and secure IL6-classified AWS and Azure environments for DoD cyber operations.</li>
+          <li>Deploy and manage Kubernetes clusters (AKS/EKS) using Terraform and GitLab CI/CD.</li>
+          <li>Lead containerized solution deployments in air-gapped systems with Zarf.</li>
+          <li>Conduct ACAS vulnerability assessments and STIG evaluations across IL2–IL6 environments.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2019–2024</div>
+      <div class="timeline-content">
+        <h3>Vectrus — Computer Operations Manager</h3>
+        <ul>
+          <li>Directed IT initiatives for U.S. Air Force operations, managing hardware/software deployments.</li>
+          <li>Implemented DoD-aligned security controls and RMF activities.</li>
+          <li>Administered SharePoint, Remedy ticketing, and $100K+ IT inventory.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2012–2016</div>
+      <div class="timeline-content">
+        <h3>U.S. Air Force — Systems Administrator (Tier 2)</h3>
+        <ul>
+          <li>Provided Tier 2 support for 1,000+ end users with 95% SLA compliance.</li>
+          <li>Managed Active Directory operations, VoIP installations, and enterprise workstation imaging.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2009–2011</div>
+      <div class="timeline-content">
+        <h3>U.S. Army — Hardware Support Technician</h3>
+        <ul>
+          <li>Installed and maintained structured cabling, desktop systems, and hardware racks.</li>
+          <li>Coordinated IT hardware/software procurement and managed asset inventory for training centers.</li>
+        </ul>
+      </div>
+    </div>
   </div>
-</section>
 
-<footer>
-  © 2025 Tameka Williams | Cloud & DevSecOps Engineer
-</footer>
+  <!-- Education -->
+  <h2>Education & Certifications</h2>
+  <ul>
+    <li>B.S., Computer Science (In Progress) — Auburn University at Montgomery</li>
+    <li>A.S., Computer Information Systems — Trenholm State Community College</li>
+    <li>CompTIA Security+ — Certified</li>
+    <li
 
-<script>
-function showTab(tabId) {
-  document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-  document.getElementById(tab
 
